@@ -1,0 +1,52 @@
+<!-- webapp/templates/index.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sales Performance Analysis</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="mt-5">Sales Performance Analysis</h1>
+        <h2>Sales Trends</h2>
+        <img src="{{ url_for('static', filename='plots/sales_trends.png') }}" alt="Sales Trends" class="img-fluid">
+
+        <h2 class="mt-5">Filter Data</h2>
+        <form method="GET" action="/filter">
+            <div class="form-group">
+                <label for="start_date">Start Date:</label>
+                <input type="date" name="start_date" class="form-control" required>
+            </div>
+            <div class="form-group">
+                <label for="end_date">End Date:</label>
+                <input type="date" name="end_date" class="form-control" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Filter</button>
+        </form>
+
+        <h2 class="mt-5">Download Report</h2>
+        <a href="/download" class="btn btn-success">Download Sales Report</a>
+
+        <h2 class="mt-5">Comparison Chart</h2>
+        <a href="/comparison" class="btn btn-info">View Revenue vs Expenses</a>
+
+        <h2 class="mt-5">Monthly Sales Trends</h2>
+        <a href="/monthly-sales" class="btn btn-secondary">View Monthly Sales</a>
+
+        <h2 class="mt-5">Sales by Product</h2>
+        <a href="/sales-by-product" class="btn btn-warning">View Sales by Product</a>
+
+        <h2 class="mt-5">Sales by Region</h2>
+        <a href="/sales-by-region" class="btn btn-danger">View Sales by Region</a>
+
+        <h2 class="mt-5">Sales Growth Rate</h2>
+        <a href="/sales-growth" class="btn btn-light">View Sales Growth Rate</a>
+
+        <h2 class="mt-5">Customer Segmentation</h2>
+        <a href="/customer-segmentation" class="btn btn-dark">View Customer Segmentation</a>
+    </div>
+</body>
+</html>
