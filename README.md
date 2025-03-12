@@ -32,8 +32,8 @@ To set up the project locally, follow these steps:
 
 1. **Clone the Repository**:
    ```bash
-   git clone https://github.com/yourusername/sales-performance-analysis.git
-   cd sales-performance-analysis
+   git clone https://github.com/yourusername/sales-data-analysis.git
+   cd sales-data-analysis
    ```
 
 2. **Install Required Packages**:
